@@ -1,0 +1,10 @@
+<div class="contents">
+    <% if @contents %>
+        <% @contents.each do |content| %>
+            <a href="<%= content['content_link'] %>">
+                <img src="<%= content['content_img_src'] %>"/>
+                <%= content['content_text'] %>
+            </a>
+        <% end %>
+    <% end %>
+</div>

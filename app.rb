@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'mongo'
 require 'json/ext'
+require 'json'
 require_relative 'db/config'
 
 
@@ -23,10 +24,11 @@ helpers do
 end
 
 get '/' do
-	settings.mongo_db.find.to_a.to_json
+	@contents = JSON.parse(settings.mongo_db.find.to_json)
+    erb :index
 end
 
-get '/thing/:id/?' do
+get '/content/:id/?' do
 	document_by_id(params[:id])
 end	
 
