@@ -1,10 +1,16 @@
+
+<head>
+<link rel="stylesheet" type="text/css" href="<%= url('/public/main.css/') %>">
+</head>
 <div class="contents">
     <% if @contents %>
         <% @contents.each do |content| %>
-            <a href="<%= content['content_link'] %>">
-                <img src="<%= content['content_img_src'] %>"/>
+            <div class="content_container">
+                <img class="content_img" src="<%= content['content_img_src'] %>"/>
+                <a href="<%= content['content_link'] %>">
                 <%= content['content_text'] %>
-            </a>
+                </a>
+           </div>
         <% end %>
     <% end %>
 </div>

@@ -1,0 +1,17 @@
+div.contents{
+    width: 100%;
+    overflow: hidden;
+}
+
+
+div.content_container{
+    width: 20%;
+    height: auto;
+    float: left;
+}
+
+
+img.content_img {
+    width: 150px;
+    height: auto;
+}
